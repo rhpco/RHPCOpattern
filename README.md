@@ -1,6 +1,7 @@
 # RHPCOpattern -  Exploit Pattern Tool
 
 ## Banner
+```
 ______ _   _ ______  _____ _____
 | ___ \ | | || ___ \/  __ \  _  |
 | |_/ / |_| || |_/ /| /  \/ | | |
@@ -18,6 +19,7 @@ positional arguments:
 
 optional arguments:
   -h, --help         show this help message and exit
+```
 
 ## Example
 rhpco@darkmoon:~/CODE/RHPCOpattern$ python RHPCOpattern.py generate 100
