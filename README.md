@@ -22,8 +22,13 @@ optional arguments:
 ```
 
 ## Example
+### Pattern generation
+```
 rhpco@darkmoon:~/CODE/RHPCOpattern$ python RHPCOpattern.py generate 100
 Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2A
-
+```
+### Pattern position
+```
 rhpco@darkmoon:~/CODE/RHPCOpattern$ python RHPCOpattern.py search 0x41346141
 Pattern 0x41346141 first occurrence at position 12 in pattern.
+```
