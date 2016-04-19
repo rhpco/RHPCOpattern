@@ -44,10 +44,6 @@ def generate(args):
     pattern = pattern_generator(args.length)
     print pattern
 def pattern_generator(length):
-    """
-    Generate a pattern of a given length up to a maximum
-    of 20280 - after this the pattern would repeat
-    """
     length = int(length)
     if length >= MAX_PATTERN_LENGTH:
         print 'ERROR: Pattern length exceeds maximum of %d' % MAX_PATTERN_LENGTH
@@ -63,12 +59,8 @@ def pattern_generator(length):
 
 def search(args):
     result = pattern_searcher(args.pattern)
-    print('Pattern %s first occurrence at position %d in pattern.' %(args.pattern, result))
+    print('Pattern %s found at position %d' %(args.pattern, result))
 def pattern_searcher(search_pattern):
-    """
-    Search for search_pattern in pattern.  Convert from hex if needed
-    Looking for needle in haystack
-    """
     needle = search_pattern
     try:
         if needle.startswith('0x'):
@@ -76,7 +68,7 @@ def pattern_searcher(search_pattern):
             needle = needle[2:].decode('hex')
             needle = needle[::-1]
     except TypeError as e:
-        print 'Unable to convert hex input:', e
+        print 'Error convert hex:', e
         sys.exit(1)
     haystack = ''
     for upper in uppercase:
@@ -86,11 +78,7 @@ def pattern_searcher(search_pattern):
                 found_at = haystack.find(needle)
                 if found_at > -1:
                     return found_at
-
-    print ('Couldn`t find %s (%s) anywhere in the pattern.' %
-           (search_pattern, needle))
-
-
+                    
 if __name__ == '__main__':
     parser = CommandLine()
     if len(sys.argv) < 2:
