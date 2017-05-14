@@ -1,4 +1,6 @@
 # RHPCOpattern -  Exploit Pattern Tool
+Exploit Pattern Tool
+Pattern generator
 
 ## Banner
 ```
